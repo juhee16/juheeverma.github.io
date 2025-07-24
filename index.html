@@ -1,31 +1,67 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Home - My GitHub Website</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Page</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Navigation Bar -->
   <header>
-    <h1>My GitHub Website</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+    <div class="container nav">
+      <div class="logo">MyPortfolio</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Main Content -->
-  <main>
-    <h2>Welcome to My Website!</h2>
-    <p>This is the homepage. Navigate using the links above.</p>
+  <main class="container">
+    <section id="work">
+      <h2>Work Experience</h2>
+      <div class="card">
+        <h3>Software Engineer - ABC Corp</h3>
+        <p>Jan 2022 – Present</p>
+        <p>Worked on web applications using React and Node.js. Led UI improvements for customer dashboard.</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="card">
+        <h3>MBA - XYZ University</h3>
+        <p>2020 – 2022</p>
+        <p>Specialization in Human Resource Management.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul class="skills-list">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>GitHub</li>
+        <li>Responsive Design</li>
+      </ul>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 My Website | Built with GitHub Pages</p>
+    <p>&copy; <span id="year"></span> MyPortfolio. All rights reserved.</p>
   </footer>
 
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
